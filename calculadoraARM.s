@@ -37,12 +37,28 @@ suma:
 
         @sumar
         add r10,r1,r2
+        ldr r4,=num1
+        str r10,[r4]
 
         b menu
 
 resta:
+        b menu
 
+multiplicacion:
+        b menu
 
+igual:
+        b menu
+
+error:
+        b menu
+
+salir:
+        mov r3, #0
+        mov r0, r3
+        ldmfd sp!, {lr}
+        bx lr
 
 .data
 .align 2
